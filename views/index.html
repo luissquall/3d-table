@@ -35,19 +35,19 @@
 
 			<div id='legs-set-1' class='legs-set'>
 				{% for i in Array(2) %}
-				{% set props = {id: 'leg-' + loop.index, classes: 'leg wood'} %}
+				{% set props = {classes: 'leg-' + loop.index + ' leg wood'} %}
 				{% include './cuboid.html' with props only %}
 				{% endfor %}
 
 				{% for i in Array(2) %}
-				{% set props = {id: 'leg-support-' + loop.index, classes: 'leg-support wood'} %}
+				{% set props = {classes: 'leg-support-' + loop.index + ' leg-support wood'} %}
 				{% include './cuboid.html' with props only %}
 				{% endfor %}
 			</div>
 
 			<div id='legs-set-2' class='legs-set'>
 				{% for i in Array(2) %}
-				{% set props = {id: 'leg-' + loop.index, classes: 'leg wood'} %}
+				{% set props = {classes: 'leg-' + loop.index + ' leg wood'} %}
 				{% include './cuboid.html' with props only %}
 				{% endfor %}
 			</div>

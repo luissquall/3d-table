@@ -233,12 +233,12 @@ body {
       transform-origin: left bottom;
       transform: translateY(385px) rotateX(-90deg);
       background: rgba(255, 0, 0, 0.5); }
-  .legs-set #leg-2 {
+  .legs-set .leg-2 {
     transform-origin: top left;
     transform: translateZ(-386px); }
   .legs-set .leg-support {
     transform-origin: top left; }
-  .legs-set #leg-support-1 {
+  .legs-set .leg-support-1 {
     position: relative;
     width: 376px;
     height: 10px;
@@ -247,46 +247,46 @@ body {
     position: absolute;
     top: 3px;
     transform: rotateY(90deg); }
-    .legs-set #leg-support-1.wood .face, .legs-set #leg-support-1.wood .base {
+    .legs-set .leg-support-1.wood .face, .legs-set .leg-support-1.wood .base {
       color: transparent;
       background: url(../img/wood.jpg); }
-    .legs-set #leg-support-1 .face, .legs-set #leg-support-1 .base {
+    .legs-set .leg-support-1 .face, .legs-set .leg-support-1 .base {
       position: absolute;
       background: rgba(255, 0, 0, 0.5);
       text-align: center; }
-    .legs-set #leg-support-1 .base {
+    .legs-set .leg-support-1 .base {
       width: 376px;
       height: 20px;
       line-height: 20px; }
-    .legs-set #leg-support-1 .face {
+    .legs-set .leg-support-1 .face {
       width: 376px;
       height: 10px;
       line-height: 10px; }
-    .legs-set #leg-support-1 .right, .legs-set #leg-support-1 .left {
+    .legs-set .leg-support-1 .right, .legs-set .leg-support-1 .left {
       width: 20px; }
-    .legs-set #leg-support-1 .front {
+    .legs-set .leg-support-1 .front {
       transform: translateZ(20px);
       background: rgba(100, 100, 100, 0.5); }
-    .legs-set #leg-support-1 .right {
+    .legs-set .leg-support-1 .right {
       transform-origin: left bottom;
       transform: translateX(376px) translateZ(20px) rotateY(90deg);
       background: rgba(255, 255, 0, 0.5); }
-    .legs-set #leg-support-1 .back {
+    .legs-set .leg-support-1 .back {
       transform: rotateY(180deg);
       background: rgba(0, 255, 0, 0.5); }
-    .legs-set #leg-support-1 .left {
+    .legs-set .leg-support-1 .left {
       transform-origin: left bottom;
       transform: rotateY(-90deg);
       background: rgba(0, 0, 255, 0.5); }
-    .legs-set #leg-support-1 .top {
+    .legs-set .leg-support-1 .top {
       transform-origin: left top;
       transform: rotateX(90deg);
       background: rgba(0, 0, 0, 0.5); }
-    .legs-set #leg-support-1 .bottom {
+    .legs-set .leg-support-1 .bottom {
       transform-origin: left bottom;
       transform: translateY(-10px) rotateX(-90deg);
       background: rgba(255, 0, 0, 0.5); }
-  .legs-set #leg-support-2 {
+  .legs-set .leg-support-2 {
     position: relative;
     width: 376px;
     height: 25px;
@@ -295,42 +295,42 @@ body {
     position: absolute;
     top: 365px;
     transform: rotateY(90deg); }
-    .legs-set #leg-support-2.wood .face, .legs-set #leg-support-2.wood .base {
+    .legs-set .leg-support-2.wood .face, .legs-set .leg-support-2.wood .base {
       color: transparent;
       background: url(../img/wood.jpg); }
-    .legs-set #leg-support-2 .face, .legs-set #leg-support-2 .base {
+    .legs-set .leg-support-2 .face, .legs-set .leg-support-2 .base {
       position: absolute;
       background: rgba(255, 0, 0, 0.5);
       text-align: center; }
-    .legs-set #leg-support-2 .base {
+    .legs-set .leg-support-2 .base {
       width: 376px;
       height: 20px;
       line-height: 20px; }
-    .legs-set #leg-support-2 .face {
+    .legs-set .leg-support-2 .face {
       width: 376px;
       height: 25px;
       line-height: 25px; }
-    .legs-set #leg-support-2 .right, .legs-set #leg-support-2 .left {
+    .legs-set .leg-support-2 .right, .legs-set .leg-support-2 .left {
       width: 20px; }
-    .legs-set #leg-support-2 .front {
+    .legs-set .leg-support-2 .front {
       transform: translateZ(20px);
       background: rgba(100, 100, 100, 0.5); }
-    .legs-set #leg-support-2 .right {
+    .legs-set .leg-support-2 .right {
       transform-origin: left bottom;
       transform: translateX(376px) translateZ(20px) rotateY(90deg);
       background: rgba(255, 255, 0, 0.5); }
-    .legs-set #leg-support-2 .back {
+    .legs-set .leg-support-2 .back {
       transform: rotateY(180deg);
       background: rgba(0, 255, 0, 0.5); }
-    .legs-set #leg-support-2 .left {
+    .legs-set .leg-support-2 .left {
       transform-origin: left bottom;
       transform: rotateY(-90deg);
       background: rgba(0, 0, 255, 0.5); }
-    .legs-set #leg-support-2 .top {
+    .legs-set .leg-support-2 .top {
       transform-origin: left top;
       transform: rotateX(90deg);
       background: rgba(0, 0, 0, 0.5); }
-    .legs-set #leg-support-2 .bottom {
+    .legs-set .leg-support-2 .bottom {
       transform-origin: left bottom;
       transform: translateY(5px) rotateX(-90deg);
       background: rgba(255, 0, 0, 0.5); }

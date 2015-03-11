@@ -100,20 +100,20 @@ $leg-support-d: $leg-w;
 		@include cuboid($leg-w, $leg-d, $leg-h);
 		position: absolute;
 	}
-	#leg-2 {
+	.leg-2 {
 		transform-origin: top left;
 		transform: translateZ(-($legs-set-w - $leg-w));
 	}
 	.leg-support {
 		transform-origin: top left;
 	}
-	#leg-support-1 {
+	.leg-support-1 {
 		@include cuboid($leg-support-w, $leg-support-d, $leg-support-h);
 		position: absolute;
 		top: 3px;
 		transform: rotateY(90deg);
 	}
-	#leg-support-2 {
+	.leg-support-2 {
 		@include cuboid($leg-support-w, $leg-support-d, $leg-support-h + 15);
 		position: absolute;
 		top: $leg-h - (($leg-support-h + 15) + 10);
