@@ -1,0 +1,154 @@
+@import 'mixins';
+
+body {
+	padding: 50px;
+	font-family: 'Roboto', sans-serif;
+	perspective: 500px;
+	//perspective-origin: 50% 50%;
+}
+
+/**
+ * Table top
+ */
+$piece-a-bw: 35px;
+$piece-a-bh: 15px;
+$piece-a-fh: 400px;
+$piece-a-count: 7;
+$piece-a-gap: 5px;
+
+$table-top-w: (($piece-a-bw + $piece-a-gap) * $piece-a-count) - $piece-a-gap;
+
+$piece-b-bw: $table-top-w;
+$piece-b-bh: $piece-a-bh;
+$piece-b-fh: 20px;
+$piece-b-count: 2;
+
+$piece-c-bw: $table-top-w - ($piece-a-bw * 2);
+$piece-c-bh: 22px;
+$piece-c-fh: 14px;
+$piece-c-top: ($piece-b-fh - $piece-c-fh) / 2;
+$piece-c-count: 2;
+
+$table-top-h: $piece-a-fh + $piece-b-fh * 2;
+
+.table-top {
+	position: absolute;
+	width: $table-top-w;
+	height: $table-top-h;
+	transform-style: preserve-3d;
+	transform-origin: top left;
+	transform: rotateX(90deg) translateY(-$table-top-h);
+
+	// Piece A
+	.piece-a {
+		@include cuboid($piece-a-bw, $piece-a-bh, $piece-a-fh);
+		position: absolute;
+		top: $piece-b-fh;
+	}
+	@for $i from 0 through ($piece-a-count - 1) {
+		#piece-a-#{$i + 1} {
+			//transform: translateX(($piece-a-bw + $piece-a-gap) * $i);
+			left: ($piece-a-bw + $piece-a-gap) * $i;
+		}
+	}
+
+	// Piece B
+	.piece-b {
+		@include cuboid($piece-b-bw, $piece-b-bh, $piece-b-fh);
+		position: absolute;
+		top: 0;
+		z-index: 10;
+	}
+	#piece-b-2 {
+		top: $piece-a-fh + $piece-b-fh;
+	}
+
+	.piece-c {
+		@include cuboid($piece-c-bw, $piece-c-bh, $piece-c-fh);
+		position: absolute;
+		top: $piece-c-top;
+		left: $piece-a-bw;
+		transform: translateZ(-$piece-c-bh);
+	}
+	#piece-c-2 {
+		top: $piece-b-fh + $piece-a-fh + $piece-c-top;
+	}
+}
+
+/**
+ * Legs set
+ */
+$legs-set-w: $piece-c-top * 2 + $piece-a-fh;
+$legs-set-h: 400px;
+$leg-h: $legs-set-h;
+$leg-w: 20px;
+$leg-d: 15px;
+$leg-support-h: 10px;
+$leg-support-w: $legs-set-w - $leg-d * 2;
+$leg-support-d: $leg-w;
+
+.legs-set {
+	position: absolute;
+	top: $piece-c-bh;
+	left: $piece-a-bw;
+	width: $leg-w;
+	height: $legs-set-h;
+	transform-style: preserve-3d;
+	transform-origin: top left;
+
+	.leg {
+		@include cuboid($leg-w, $leg-d, $leg-h);
+		position: absolute;
+	}
+	#leg-2 {
+		transform-origin: top left;
+		transform: translateZ(-($legs-set-w - $leg-w));
+	}
+	.leg-support {
+		transform-origin: top left;
+	}
+	#leg-support-1 {
+		@include cuboid($leg-support-w, $leg-support-d, $leg-support-h);
+		position: absolute;
+		top: 3px;
+		transform: rotateY(90deg);
+	}
+	#leg-support-2 {
+		@include cuboid($leg-support-w, $leg-support-d, $leg-support-h + 15);
+		position: absolute;
+		top: $leg-h - (($leg-support-h + 15) + 10);
+		transform: rotateY(90deg);
+	}
+}
+#legs-set-1 {
+	transform: skewX(22deg) translateZ(-($leg-d + $piece-c-top)) translateX(30px) rotateY(0deg) rotateX(0deg);
+}
+#legs-set-2 {
+	transform: skewX(-22deg) translateZ(-($leg-d + $piece-c-top)) translateX(160px) rotateY(0deg) rotateX(0deg);
+}
+
+/**
+ * Table
+ */
+.table {
+	width: $table-top-w;
+	height: $piece-a-bh + $piece-c-bh + $leg-h;
+	margin: auto;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) rotateY(0deg);
+
+	// Skins
+	&.metal {
+		.face, .base {
+			color: transparent;
+			background: url(../img/metal.jpg) !important;
+		}
+	}
+	&.metal-plain {
+		.face, .base {
+			color: transparent;
+			// http://wojtar-stock.deviantart.com/art/metal-texture-7-78669443
+			background: url(../img/metal-plain.jpg) !important;
+		}
+	}
+}

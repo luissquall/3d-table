@@ -1,0 +1,61 @@
+<!doctype html>
+<html class='no-js' lang=''>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='x-ua-compatible' content='ie=edge'>
+		<title>3D Table</title>
+		<meta name='description' content=''>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+		<link rel='apple-touch-icon' href='apple-touch-icon.png'>
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel='stylesheet' href='node_modules/normalize.css/normalize.css'>
+		<link rel='stylesheet' href='css/main.css'>
+	</head>
+
+	<body>
+		<div class='table'>
+			<div class='table-top'>
+				{% for i in Array(7) %}
+				{% set props = {id: 'piece-a-' + loop.index, classes: 'piece-a wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+
+				{% for i in Array(2) %}
+				{% set props = {id: 'piece-b-' + loop.index, classes: 'piece-b wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+
+				{% for i in Array(2) %}
+				{% set props = {id: 'piece-c-' + loop.index, classes: 'piece-c wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+			</div>
+
+			<div id='legs-set-1' class='legs-set'>
+				{% for i in Array(2) %}
+				{% set props = {id: 'leg-' + loop.index, classes: 'leg wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+
+				{% for i in Array(2) %}
+				{% set props = {id: 'leg-support-' + loop.index, classes: 'leg-support wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+			</div>
+
+			<div id='legs-set-2' class='legs-set'>
+				{% for i in Array(2) %}
+				{% set props = {id: 'leg-' + loop.index, classes: 'leg wood'} %}
+				{% include './cuboid.html' with props only %}
+				{% endfor %}
+			</div>
+		</div>
+
+		{#
+		<script src='node_modules/jquery/dist/jquery.min.js'></script>
+		<srcipt src='js/main.js'></script>
+		#}
+	</body>
+</html>

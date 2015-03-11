@@ -1,0 +1,362 @@
+body {
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+  perspective: 500px; }
+
+/**
+ * Table top
+ */
+.table-top {
+  position: absolute;
+  width: 275px;
+  height: 440px;
+  transform-style: preserve-3d;
+  transform-origin: top left;
+  transform: rotateX(90deg) translateY(-440px); }
+  .table-top .piece-a {
+    position: relative;
+    width: 35px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute;
+    top: 20px; }
+    .table-top .piece-a.wood .face, .table-top .piece-a.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .table-top .piece-a .face, .table-top .piece-a .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .table-top .piece-a .base {
+      width: 35px;
+      height: 15px;
+      line-height: 15px; }
+    .table-top .piece-a .face {
+      width: 35px;
+      height: 400px;
+      line-height: 400px; }
+    .table-top .piece-a .right, .table-top .piece-a .left {
+      width: 15px; }
+    .table-top .piece-a .front {
+      transform: translateZ(15px);
+      background: rgba(100, 100, 100, 0.5); }
+    .table-top .piece-a .right {
+      transform-origin: left bottom;
+      transform: translateX(35px) translateZ(15px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .table-top .piece-a .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .table-top .piece-a .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .table-top .piece-a .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .table-top .piece-a .bottom {
+      transform-origin: left bottom;
+      transform: translateY(385px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+  .table-top #piece-a-1 {
+    left: 0px; }
+  .table-top #piece-a-2 {
+    left: 40px; }
+  .table-top #piece-a-3 {
+    left: 80px; }
+  .table-top #piece-a-4 {
+    left: 120px; }
+  .table-top #piece-a-5 {
+    left: 160px; }
+  .table-top #piece-a-6 {
+    left: 200px; }
+  .table-top #piece-a-7 {
+    left: 240px; }
+  .table-top .piece-b {
+    position: relative;
+    width: 275px;
+    height: 20px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute;
+    top: 0;
+    z-index: 10; }
+    .table-top .piece-b.wood .face, .table-top .piece-b.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .table-top .piece-b .face, .table-top .piece-b .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .table-top .piece-b .base {
+      width: 275px;
+      height: 15px;
+      line-height: 15px; }
+    .table-top .piece-b .face {
+      width: 275px;
+      height: 20px;
+      line-height: 20px; }
+    .table-top .piece-b .right, .table-top .piece-b .left {
+      width: 15px; }
+    .table-top .piece-b .front {
+      transform: translateZ(15px);
+      background: rgba(100, 100, 100, 0.5); }
+    .table-top .piece-b .right {
+      transform-origin: left bottom;
+      transform: translateX(275px) translateZ(15px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .table-top .piece-b .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .table-top .piece-b .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .table-top .piece-b .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .table-top .piece-b .bottom {
+      transform-origin: left bottom;
+      transform: translateY(5px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+  .table-top #piece-b-2 {
+    top: 420px; }
+  .table-top .piece-c {
+    position: relative;
+    width: 205px;
+    height: 14px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute;
+    top: 3px;
+    left: 35px;
+    transform: translateZ(-22px); }
+    .table-top .piece-c.wood .face, .table-top .piece-c.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .table-top .piece-c .face, .table-top .piece-c .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .table-top .piece-c .base {
+      width: 205px;
+      height: 22px;
+      line-height: 22px; }
+    .table-top .piece-c .face {
+      width: 205px;
+      height: 14px;
+      line-height: 14px; }
+    .table-top .piece-c .right, .table-top .piece-c .left {
+      width: 22px; }
+    .table-top .piece-c .front {
+      transform: translateZ(22px);
+      background: rgba(100, 100, 100, 0.5); }
+    .table-top .piece-c .right {
+      transform-origin: left bottom;
+      transform: translateX(205px) translateZ(22px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .table-top .piece-c .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .table-top .piece-c .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .table-top .piece-c .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .table-top .piece-c .bottom {
+      transform-origin: left bottom;
+      transform: translateY(-8px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+  .table-top #piece-c-2 {
+    top: 423px; }
+
+/**
+ * Legs set
+ */
+.legs-set {
+  position: absolute;
+  top: 22px;
+  left: 35px;
+  width: 20px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform-origin: top left; }
+  .legs-set .leg {
+    position: relative;
+    width: 20px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute; }
+    .legs-set .leg.wood .face, .legs-set .leg.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .legs-set .leg .face, .legs-set .leg .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .legs-set .leg .base {
+      width: 20px;
+      height: 15px;
+      line-height: 15px; }
+    .legs-set .leg .face {
+      width: 20px;
+      height: 400px;
+      line-height: 400px; }
+    .legs-set .leg .right, .legs-set .leg .left {
+      width: 15px; }
+    .legs-set .leg .front {
+      transform: translateZ(15px);
+      background: rgba(100, 100, 100, 0.5); }
+    .legs-set .leg .right {
+      transform-origin: left bottom;
+      transform: translateX(20px) translateZ(15px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .legs-set .leg .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .legs-set .leg .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .legs-set .leg .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .legs-set .leg .bottom {
+      transform-origin: left bottom;
+      transform: translateY(385px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+  .legs-set #leg-2 {
+    transform-origin: top left;
+    transform: translateZ(-386px); }
+  .legs-set .leg-support {
+    transform-origin: top left; }
+  .legs-set #leg-support-1 {
+    position: relative;
+    width: 376px;
+    height: 10px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute;
+    top: 3px;
+    transform: rotateY(90deg); }
+    .legs-set #leg-support-1.wood .face, .legs-set #leg-support-1.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .legs-set #leg-support-1 .face, .legs-set #leg-support-1 .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .legs-set #leg-support-1 .base {
+      width: 376px;
+      height: 20px;
+      line-height: 20px; }
+    .legs-set #leg-support-1 .face {
+      width: 376px;
+      height: 10px;
+      line-height: 10px; }
+    .legs-set #leg-support-1 .right, .legs-set #leg-support-1 .left {
+      width: 20px; }
+    .legs-set #leg-support-1 .front {
+      transform: translateZ(20px);
+      background: rgba(100, 100, 100, 0.5); }
+    .legs-set #leg-support-1 .right {
+      transform-origin: left bottom;
+      transform: translateX(376px) translateZ(20px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .legs-set #leg-support-1 .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .legs-set #leg-support-1 .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .legs-set #leg-support-1 .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .legs-set #leg-support-1 .bottom {
+      transform-origin: left bottom;
+      transform: translateY(-10px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+  .legs-set #leg-support-2 {
+    position: relative;
+    width: 376px;
+    height: 25px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    position: absolute;
+    top: 365px;
+    transform: rotateY(90deg); }
+    .legs-set #leg-support-2.wood .face, .legs-set #leg-support-2.wood .base {
+      color: transparent;
+      background: url(../img/wood.jpg); }
+    .legs-set #leg-support-2 .face, .legs-set #leg-support-2 .base {
+      position: absolute;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center; }
+    .legs-set #leg-support-2 .base {
+      width: 376px;
+      height: 20px;
+      line-height: 20px; }
+    .legs-set #leg-support-2 .face {
+      width: 376px;
+      height: 25px;
+      line-height: 25px; }
+    .legs-set #leg-support-2 .right, .legs-set #leg-support-2 .left {
+      width: 20px; }
+    .legs-set #leg-support-2 .front {
+      transform: translateZ(20px);
+      background: rgba(100, 100, 100, 0.5); }
+    .legs-set #leg-support-2 .right {
+      transform-origin: left bottom;
+      transform: translateX(376px) translateZ(20px) rotateY(90deg);
+      background: rgba(255, 255, 0, 0.5); }
+    .legs-set #leg-support-2 .back {
+      transform: rotateY(180deg);
+      background: rgba(0, 255, 0, 0.5); }
+    .legs-set #leg-support-2 .left {
+      transform-origin: left bottom;
+      transform: rotateY(-90deg);
+      background: rgba(0, 0, 255, 0.5); }
+    .legs-set #leg-support-2 .top {
+      transform-origin: left top;
+      transform: rotateX(90deg);
+      background: rgba(0, 0, 0, 0.5); }
+    .legs-set #leg-support-2 .bottom {
+      transform-origin: left bottom;
+      transform: translateY(5px) rotateX(-90deg);
+      background: rgba(255, 0, 0, 0.5); }
+
+#legs-set-1 {
+  transform: skewX(22deg) translateZ(-18px) translateX(30px) rotateY(0deg) rotateX(0deg); }
+
+#legs-set-2 {
+  transform: skewX(-22deg) translateZ(-18px) translateX(160px) rotateY(0deg) rotateX(0deg); }
+
+/**
+ * Table
+ */
+.table {
+  width: 275px;
+  height: 437px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg); }
+  .table.metal .face, .table.metal .base {
+    color: transparent;
+    background: url(../img/metal.jpg) !important; }
+  .table.metal-plain .face, .table.metal-plain .base {
+    color: transparent;
+    background: url(../img/metal-plain.jpg) !important; }
+
+
+
+/*# sourceMappingURL=maps/main.css.map */

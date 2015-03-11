@@ -1,0 +1,65 @@
+@mixin cuboid($base-width: 50px, $base-height: 20px, $face-height: 400px) {
+	$face-width: $base-width;
+
+	position: relative;
+	width: $face-width;
+	height: $face-height;
+	transform-style: preserve-3d;
+	transform: rotateX(0deg) rotateY(0deg);
+
+	&.wood {
+		.face, .base {
+			color: transparent;
+			background: url(../img/wood.jpg);
+		}
+	}
+
+	.face, .base {
+		position: absolute;
+		background: rgba(255,0,0,.5);
+		text-align: center;
+	}
+	.base {
+		width: $base-width;
+		height: $base-height;
+		line-height: $base-height;
+	}
+	.face {
+		width: $face-width;
+		height: $face-height;
+		line-height: $face-height;
+	}
+
+	.right, .left {
+		width: $base-height;
+	}
+
+	.front {
+		transform: translateZ($base-height);
+		background: rgba(100,100,100,.5);
+	}
+	.right {
+		transform-origin: left bottom;
+		transform: translateX($base-width) translateZ($base-height) rotateY(90deg);
+		background: rgba(255,255,0,.5);
+	}
+	.back {
+		transform: rotateY(180deg);
+		background: rgba(0,255,0,.5);
+	}
+	.left {
+		transform-origin: left bottom;
+		transform: rotateY(-90deg);
+		background: rgba(0,0,255,.5);
+	}
+	.top {
+		transform-origin: left top;
+		transform: rotateX(90deg);
+		background: rgba(0,0,0,.5);
+	}
+	.bottom {
+		transform-origin: left bottom;
+		transform: translateY($face-height - $base-height) rotateX(-90deg);
+		background: rgba(255,0,0,.5);
+	}
+}
